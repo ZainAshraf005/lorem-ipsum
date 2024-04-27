@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;600;700;800&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Recursive', sans-serif;
+    color: black;
+}
+
+:root {
+    --theme: #33A7E0;
+}
+
+#color {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="color"] {
+    margin: auto;
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    cursor: pointer;
+}
+
+
+.none {
+    display: none;
+}
+
+#blue {
+    background-color: transparent;
+    color: green;
+}
+
+
+#first {
+    background-color: #000000ed;
+    color: var(--theme);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    /* display: none; */
+}
+
+#first .center {
+    width: 600px;
+    height: 500px;
+    border: 1px solid var(--theme);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center button {
+    width: 200px;
+    background-color: var(--theme);
+    color: white;
+    border: 2px solid var(--theme);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.center button:hover {
+    background-color: white;
+    color: var(--theme);
+}
+
+.center button:hover::after {
+    border-bottom-color: var(--theme);
+}
+
+.center h3 {
+    color: var(--theme);
+}
+::-webkit-scrollbar {
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--theme);
+    border-radius: 5rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.plane {
+    position: absolute;
+    top: 3%;
+    left: 50px;
+    width: 90%;
+    /* overflow: hidden; */
+}
+
+.planeim {
+    width: 100px;
+    transform: translateX(1200%);
+    animation: plane 10s linear infinite;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    width: 90%;
+}
+
+.button {
+    background-color: var(--theme);
+    border: 2px solid var(--theme);
+}
+
+.flight button {
+    background-color: #ffba00;
+    border: 2px solid #ffba00;
+    text-transform: uppercase;
+}
+
+.flight button:hover,
+.flight button:focus {
+    background-color: #ff8500;
+    border-color: #ff8500;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #1976D2;
+    border-color: #1976D2;
+}
+
+.button:active {
+    background-color: #0D47A1;
+    border-color: #0D47A1;
+}
+
+nav ul {
+    gap: 2rem;
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
+}
+
+.image {
+    background: url(bg.jpg);
+    mix-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 530px;
+}
+
+.text {
+    position: absolute;
+    top: 66px;
+    left: 100px;
+}
+
+.text h1 {
+    text-transform: uppercase;
+    color: #fff;
+    width: 100%;
+    font-size: 55px;
+}
+
+.text button {
+    font-size: 20px;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    text-transform: uppercase;
+}
+
+.text button:hover {
+    background-color: var(--theme);
+    border-color: var(--theme);
+}
+
+.upcard {
+    background-color: #fff;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 94%;
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 25px;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 i {
+    font-style: normal;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
+    /* color: var(--theme) !important; */
+    text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+}
+
+form {
+    display: flex;
+    margin-bottom: 100px;
+    border: 1px solid #d6cece;
+    margin: auto;
+    width: 95%;
+}
+
+.bx-compass {
+    position: absolute;
+    font-size: 25px;
+    top: 34%;
+    right: -18px;
+    z-index: 1;
+    color: var(--theme);
+}
+
+/* Style the text input */
+input[type="text"] {
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #fff;
+    color: var(--theme);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Style the placeholder text */
+input[type="text"]::placeholder {
+    color: #979292;
+}
+
+/* Remove the default border shadow on focus */
+input[type="text"]:focus {
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+fieldset {
+    position: relative;
+    border: none;
+    border-left: 1px solid #d6cece;
+}
+
+fieldset:first-child {
+    border: none;
+}
+
+small {
+    position: absolute;
+    top: 0;
+    left: 5;
+    color: #979292;
+}
+
+input:placeholder-shown {
+    color: #979292;
+}
+
+.dollar,
+.logo {
+    cursor: pointer;
+}
+
+.logo:hover {
+    filter: hue-rotate(100deg);
+}
+
+
+
+
+input,
+select {
+    bottom: 0;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.card-head {
+    display: flex;
+    text-transform: capitalize;
+    justify-content: center;
+    width: 103%;
+    float: right;
+    margin: auto;
+    margin-bottom: 3rem;
+    background-color: var(--theme);
+    border-bottom: 1px solid #979292;
+}
+
+i {
+    color: #fff;
+}
+
+.one i {
+    color: black;
+}
+
+.card-head div {
+    padding: 10px 3.5rem;
+    color: #fff;
+    background-color: var(--theme);
+    font-size: 19px;
+}
+
+.card-head div>a {
+    color: #fff;
+}
+
+.one a {
+    color: black !important;
+}
+
+.card-head div:first-child {
+    color: black;
+    background-color: #fff;
+    padding-left: 73px;
+}
+
+/* Style the date input */
+input[type="date"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #fff;
+    color: var(--theme);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Style the placeholder text */
+input[type="date"]::placeholder {
+    color: #979292;
+}
+
+/* Remove the default arrow icon for date input */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: var(--theme);
+}
+
+/* Style the date input in Firefox */
+input[type="date"]::-moz-placeholder {
+    color: #979292;
+}
+
+input[type="date"]::-moz-placeholder-shown {
+    color: #979292;
+}
+
+input[type="date"]::-moz-focus-inner {
+    border: none;
+}
+
+/* Style the select dropdown */
+select {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #fff;
+    color: var(--theme);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+/* Style the dropdown arrow */
+select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    color: var(--theme);
+}
+
+/* Style the options in the dropdown */
+option {
+    color: var(--theme);
+    background-color: #fff;
+}
+
+option:hover {
+    color: #fff;
+    background-color: var(--theme);
+}
+
+.bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 20px;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bottom .promo {
+    color: var(--theme);
+    cursor: pointer;
+}
+
+/* second section starting/////////////////////////// */
+
+section.second {
+    padding-top: 110px;
+    width: 100%;
+    padding-bottom: 10rem;
+    margin-bottom: 10rem;
+}
+
+.pics {
+    margin: auto;
+    margin-top: 5rem;
+    position: relative;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    height: 200px;
+}
+
+.pics div {
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px #000000b5;
+}
+
+.pics img {
+    background: #0202029c;
+    opacity: 0;
+    transition: .3s;
+    border-radius: 25px;
+}
+
+.pics img:hover {
+    opacity: 1;
+}
+
+.pic01 {
+    background: url(canada.jpg);
+    mix-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.pics div:hover {
+    background-position: center bottom;
+
+}
+
+.pic02 {
+    background: url(pakistan.jpg);
+    background-size: cover;
+    mix-blend-mode: multiply;
+    height: 191px;
+    grid-column: span 2;
+}
+
+.pic03 {
+    background: url(dubai.jpg);
+    background-size: cover;
+    height: 191px;
+}
+
+.pic04 {
+    background: url(france.jpg);
+    background-size: cover;
+    height: 191px;
+}
+
+.stext {
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.stext h2 {
+    text-transform: uppercase;
+}
+
+
+footer {
+    background-color: var(--theme);
+    padding: 2rem 0;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.content h3,
+.content p {
+    color: #fff;
+}
+
+.content .bx {
+    border-radius: 6px;
+    font-size: 30px;
+}
+
+.content .bxl-whatsapp {
+    background: linear-gradient(to right, #25d366, #075e54);
+}
+
+
+.content .bxl-instagram {
+    background: linear-gradient(to right, #8a3ab9, #e95950, #fccc63, #8a3ab9);
+}
+
+.content .bx:hover {
+    transform: translateY(-20%);
+}
+
+.content .bxl-linkedin {
+    background: linear-gradient(to right, #0077b5, #0a66c2);
+}
+
+.content .bxs-user-account {
+    background: linear-gradient(45deg, #FF4E50, #F9D423);
+    /* Adjust the angle (135deg) and colors (#ff6b6b and #3a1c71) as needed */
+}
+
+
+
+
+
+
+
+/* Keyframes for plane animation */
+@keyframes plane {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(1200%);
+    }
+}
